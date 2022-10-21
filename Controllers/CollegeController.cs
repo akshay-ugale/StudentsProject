@@ -49,6 +49,8 @@ namespace StudentsProject.Controllers
                 return NotFound();
 
             DbContext.Courses.Remove(course);
+            DbContext.SaveChanges();
+
             return Ok();
         }
 
